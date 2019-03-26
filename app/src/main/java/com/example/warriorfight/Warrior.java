@@ -29,4 +29,8 @@ public abstract class Warrior {
     public void takeHit(int attackAdversaire){
         setLife(getLife() - attackAdversaire);
     }
+
+    public void takeHit(Warrior ennemy){
+        setLife(getLife() - ennemy.getAttack());
+    }
 }

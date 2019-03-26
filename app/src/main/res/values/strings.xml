@@ -7,7 +7,7 @@
     <string name="fighter">Fighter</string>
     <string name="imagemonkey">imageMonkey</string>
     <string name="imagecadilhac">imageCadilhac</string>
-    <string name="johnny_description_fighter">johnny a plus d\'un tour dans son sac, son Houraken te décroche la machoire comme une patate de forain!</string>
+    <string name="johnny_description_fighter">johnny a plus d\'un tour dans son sac, son Houraken aussi puissant q\'une patate de forain te décroche la machoire !</string>
     <string name="imgimli">imGimli</string>
     <string name="choose_johnny">choose Johnny</string>
     <string name="choose_conan">Choose Conan</string>
@@ -15,5 +15,6 @@
     <string name="enter_arena">Enter arena</string>
     <string name="conan_description">Ce chippendale du moyen âge n\'est pas à prendre à la légére! Son épée affutée est redoutable contre les ennemis se battant à main nues!</string>
     <string name="gimliDescription">Malgré son addiction à la cervoise, Gimli décrochera bien volontier un gros coup de hache à celui qui viendra lui chercher des noises! Il préfére les combats contre les gladiateurs</string>
+    <string name="start_fight">Start Fight</string>
 
 </resources>

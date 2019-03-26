@@ -18,3 +18,4 @@ public class Conan extends Warrior {
     }
 
 }
+
