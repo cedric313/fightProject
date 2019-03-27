@@ -6,22 +6,24 @@ public class Human extends Warrior implements Attack {
         super(name, attackWarrior);
     }
 
-    public void takeHit(){
-
+    public void takeHit(int attackEnnemy){
+        setLife(getLife() - attackEnnemy );
     }
 
 
     public void spell(){
-
+        setAttackWarrior(30);
     }
 
 
     public void cac(){
-
+        setAttackWarrior(60);
     }
 
 
     public void distance(){
-
+        setAttackWarrior(20);
     }
+
+
 }

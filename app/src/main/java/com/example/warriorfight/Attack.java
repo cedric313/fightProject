@@ -7,4 +7,6 @@ public interface Attack {
     void cac();
 
     void distance();
+
+
 }

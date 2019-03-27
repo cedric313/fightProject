@@ -1,6 +1,7 @@
 package com.example.warriorfight;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,11 +18,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button btSelectPlayer = findViewById(R.id.btSelectPlayer);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.mka);
         btSelectPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goFighters = new Intent(MainActivity.this, TheFighters.class);
-                startActivity(goFighters);
+                mp.start();
+                Intent goArena = new Intent(MainActivity.this, TheFighters.class);
+                startActivity(goArena);
             }
         });
     }

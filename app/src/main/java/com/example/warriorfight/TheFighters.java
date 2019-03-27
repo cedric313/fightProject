@@ -14,40 +14,36 @@ public class TheFighters extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_the_fighters);
 
-        Button chooseCadilhac = findViewById(R.id.btChooseCadilhac);
+        final Button chooseCadilhac = findViewById(R.id.btChooseCadilhac);
         chooseCadilhac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Extraterrestrial extraterrestrial1 = new Extraterrestrial("cadilhac", 20);
+                String chooseCadilhac = "cadhilac";
+                Intent goFighters = new Intent(TheFighters.this, Arena.class);
+                goFighters.putExtra("EXTRA_NAME", chooseCadilhac);
+                startActivity(goFighters);
             }
         });
         Button chooseConan = findViewById(R.id.btChooseConan);
         chooseConan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Human human1 = new Human("conan" , 50);
+                String chooseConan = "Conan";
+                Intent goFighters = new Intent(TheFighters.this, Arena.class);
+                goFighters.putExtra("EXTRA_NAME" , chooseConan);
+                startActivity(goFighters);
             }
         });
         Button chooseGimli = findViewById(R.id.btChooseGimli);
         chooseGimli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Dwarf dwarf1 = new Dwarf("Gimli" , 30);
+                String chooseGimli = "Gimli";
+                Intent goFighters = new Intent(TheFighters.this, Arena.class);
+                goFighters.putExtra("EXTRA_NAME" , chooseGimli);
+                startActivity(goFighters);
             }
         });
-        Button enterInArena = findViewById(R.id.btEnterArena);
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.prepare);
-        enterInArena.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mp.start();
-                Intent enterInArena = new Intent(TheFighters.this, Arena.class);
-                startActivity(enterInArena);
-
-
-            }
-        });
-
 
     }
 }

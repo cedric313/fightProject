@@ -6,22 +6,24 @@ public class Dwarf extends Warrior implements Attack {
         super(name, attackWarrior);
     }
 
-    public void takeHit(){
-
+    public void takeHit(int attackEnnemy){
+        setLife(getLife() - attackEnnemy );
     }
 
     @Override
     public void spell(){
-
+        setAttackWarrior(25);
     }
 
     @Override
     public void cac(){
-
+        setAttackWarrior(62);
     }
 
     @Override
     public void distance(){
-
+        setAttackWarrior(20);
     }
+
+
 }

@@ -39,11 +39,15 @@ public abstract class Warrior {
         this.life = life;
     }
 
+    public boolean isKo(){
+        return (getLife() <= 0);
+    }
+
     public void takeHit(int attackEnnemy){
         setLife(getLife() - attackEnnemy );
     }
 
-    public void takeHit(Warrior ennemy){
+    /*public void takeHit(Warrior ennemy){
         setLife(getLife() - ennemy.getAttackWarrior());
-    }
+    }*/
 }

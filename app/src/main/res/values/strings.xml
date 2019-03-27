@@ -16,5 +16,6 @@
     <string name="conan_description">Ce chippendale du moyen âge n\'est pas à prendre à la légére! Son épée affutée est redoutable contre les ennemis se battant à main nues!</string>
     <string name="gimliDescription">Malgré son addiction à la cervoise, Gimli décrochera bien volontier un gros coup de hache à celui qui viendra lui chercher des noises! Il préfére les combats contre les gladiateurs</string>
     <string name="start_fight">Start Fight</string>
+    <string name="your_player_is">Your player is</string>
 
 </resources>
