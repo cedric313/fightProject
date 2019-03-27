@@ -13,11 +13,6 @@ public class Arena extends AppCompatActivity {
         setContentView(R.layout.activity_arena);
 
 
-
-            Conan conan1 = new Conan(30);
-            Cadilhac cadilhac1 = new Cadilhac(30);
-            Gimli gimli1 = new Gimli(30);
-
         Button startFight = findViewById(R.id.btStartFight);
         startFight.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,12 +20,6 @@ public class Arena extends AppCompatActivity {
 
             }
         });
-            cadilhac1.cadilhacFightVsConan();
-            conan1.takeHit(cadilhac1.getAttack());
-            System.out.println(conan1.getLife());
 
-            cadilhac1.cadilhacFightVsGimli();
-            gimli1.takeHit(cadilhac1.getAttack());
-            System.out.println(gimli1.getLife());
     }
 }

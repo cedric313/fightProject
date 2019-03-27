@@ -2,35 +2,48 @@ package com.example.warriorfight;
 
 public abstract class Warrior {
 
-    private int attack;
+    private String name;
+    private int attackWarrior;
     private int life;
 
-    public Warrior(int attack){
-        this.attack = attack;
+    public Warrior(String name, int attackWarrior){
+        this.name = name;
+        this.attackWarrior = attackWarrior;
         this.life = 100;
+
     }
 
-    public int getAttack(){
-        return this.attack;
+    public String getName(){
+        return this.name;
     }
 
     public int getLife(){
         return this.life;
     }
 
-    public void setAttack(int attack){
-        this.attack = attack;
+    public int getAttackWarrior() {
+        return attackWarrior;
     }
+
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setAttackWarrior(int attackWarrior) {
+        this.attackWarrior = attackWarrior;
+    }
+
 
     public void setLife(int life){
         this.life = life;
     }
 
-    public void takeHit(int attackAdversaire){
-        setLife(getLife() - attackAdversaire);
+    public void takeHit(int attackEnnemy){
+        setLife(getLife() - attackEnnemy );
     }
 
     public void takeHit(Warrior ennemy){
-        setLife(getLife() - ennemy.getAttack());
+        setLife(getLife() - ennemy.getAttackWarrior());
     }
 }
