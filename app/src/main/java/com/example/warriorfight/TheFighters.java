@@ -18,21 +18,21 @@ public class TheFighters extends AppCompatActivity {
         chooseCadilhac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Extraterrestrial extraterrestrial1 = new Extraterrestrial("cadilhac", 20);
             }
         });
         Button chooseConan = findViewById(R.id.btChooseConan);
         chooseConan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Human human1 = new Human("conan" , 50);
             }
         });
         Button chooseGimli = findViewById(R.id.btChooseGimli);
         chooseGimli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Dwarf dwarf1 = new Dwarf("Gimli" , 30);
             }
         });
         Button enterInArena = findViewById(R.id.btEnterArena);
