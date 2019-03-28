@@ -4,37 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tvWelcome"
         android:layout_width="390dp"
-        android:layout_height="42dp"
+        android:layout_height="104dp"
         android:allowUndo="false"
+        android:fontFamily="@font/piratekeg"
         android:gravity="center"
         android:text="@string/welcome_to_warrior_fight"
+        android:textColor="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.614" />
 
     <Button
         android:id="@+id/btSelectPlayer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/selecte_your_player"
+        android:fontFamily="@font/piratekeg"
+        android:text="@string/start_game"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
+        app:layout_constraintVertical_bias="0.514" />
 
     <ImageView
-        android:id="@+id/ivMonkey"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:id="@+id/ivRing"
+        android:layout_width="0dp"
+        android:layout_height="280dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -42,10 +52,10 @@
         android:contentDescription="@string/imagemonkey"
         app:layout_constraintBottom_toTopOf="@+id/tvWelcome"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.756"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ring" />
 
 </android.support.constraint.ConstraintLayout>

@@ -16,17 +16,19 @@ public class Arena extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arena);
-
+        MediaPlayer mpPrepareToFight = MediaPlayer.create(Arena.this ,R.raw.prepare);
+        mpPrepareToFight.start();
 
         //recovery value of player choose
             TextView tvPlayerChoose = findViewById(R.id.tvPlayerSelected);
             Intent intent = getIntent();
             String printPlayer = intent.getStringExtra("EXTRA_NAME");
-            tvPlayerChoose.setText("Your fighter  " + printPlayer + " is ready to fight!" );
+            tvPlayerChoose.setText(printPlayer + " is ready to fight !" );
 
             ImageView imagePlayer = findViewById(R.id.ivPlayer);
             ImageView imageEnnemy = findViewById(R.id.ivEnnemy);
             //Condition to view image player .equals for compare String
+
             if(printPlayer.equals("Conan")){
                 imageEnnemy.setImageDrawable(getDrawable(R.drawable.uraken));
                 imagePlayer.setImageDrawable(getDrawable(R.drawable.conanfight));
@@ -54,11 +56,12 @@ public class Arena extends AppCompatActivity {
                 TextView tvPlayerChoose = findViewById(R.id.tvPlayerSelected);
                 Intent intent = getIntent();
                 String printPlayer = intent.getStringExtra("EXTRA_NAME");
-                tvPlayerChoose.setText("Your fighter  " + printPlayer + " is ready to fight!");
+                tvPlayerChoose.setText(printPlayer + " is ready to fight !");
                 //Create object instance
-                Extraterrestrial extraterrestrial1 = new Extraterrestrial("Cadhilac" , 20);
-                Human human1 = new Human("Conan" , 30);
-                Dwarf dwarf1 = new Dwarf("Gimli" , 30);
+                final Extraterrestrial extraterrestrial1 = new Extraterrestrial("Cadhilac" , 20);
+                final Human human1 = new Human("Conan" , 30);
+                final Dwarf dwarf1 = new Dwarf("Gimli" , 30);
+
 
                 while (!human1.isKo() && !extraterrestrial1.isKo()) {
                     human1.spell();
@@ -79,9 +82,6 @@ public class Arena extends AppCompatActivity {
 
                 ImageView backgroundChange = findViewById(R.id.ivBlood);
                 backgroundChange.setImageDrawable(getDrawable(R.drawable.blood));
-
-
-
 
             }
         });

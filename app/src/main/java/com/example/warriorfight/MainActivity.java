@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         Button btSelectPlayer = findViewById(R.id.btSelectPlayer);
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.mka);
+
         btSelectPlayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mp.start();
+
                 Intent goArena = new Intent(MainActivity.this, TheFighters.class);
                 startActivity(goArena);
             }

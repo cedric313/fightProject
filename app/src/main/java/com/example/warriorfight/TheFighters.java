@@ -13,6 +13,8 @@ public class TheFighters extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_the_fighters);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.mka);
+        mp.start();
 
         final Button chooseCadilhac = findViewById(R.id.btChooseCadilhac);
         chooseCadilhac.setOnClickListener(new View.OnClickListener() {
@@ -22,6 +24,7 @@ public class TheFighters extends AppCompatActivity {
                 Intent goFighters = new Intent(TheFighters.this, Arena.class);
                 goFighters.putExtra("EXTRA_NAME", chooseCadilhac);
                 startActivity(goFighters);
+                mp.stop();
             }
         });
         Button chooseConan = findViewById(R.id.btChooseConan);
@@ -32,6 +35,7 @@ public class TheFighters extends AppCompatActivity {
                 Intent goFighters = new Intent(TheFighters.this, Arena.class);
                 goFighters.putExtra("EXTRA_NAME" , chooseConan);
                 startActivity(goFighters);
+                mp.stop();
             }
         });
         Button chooseGimli = findViewById(R.id.btChooseGimli);
@@ -42,6 +46,7 @@ public class TheFighters extends AppCompatActivity {
                 Intent goFighters = new Intent(TheFighters.this, Arena.class);
                 goFighters.putExtra("EXTRA_NAME" , chooseGimli);
                 startActivity(goFighters);
+                mp.stop();
             }
         });
 

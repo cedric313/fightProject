@@ -10,8 +10,8 @@
         android:id="@+id/btStartFight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="64dp"
         android:text="@string/start_fight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -19,10 +19,11 @@
     <TextView
         android:id="@+id/tvPlayerSelected"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_height="16dp"
         android:layout_marginTop="33dp"
-        android:text="@string/your_player_is"
+        android:fontFamily="@font/piratekeg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,21 +38,51 @@
 
     <ImageView
         android:id="@+id/ivEnnemy"
-        android:layout_width="363dp"
-        android:layout_height="221dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="365dp"
+        android:layout_height="217dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="68dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivPlayer" />
 
     <ImageView
         android:id="@+id/ivBlood"
-        android:layout_width="376dp"
-        android:layout_height="695dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="218dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="116dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btSpellSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/spell"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlayer" />
+
+    <Button
+        android:id="@+id/btCacSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/cac"
+        app:layout_constraintStart_toEndOf="@+id/btSpellSelected"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlayer" />
+
+    <Button
+        android:id="@+id/btDistanceSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/distance"
+        app:layout_constraintStart_toEndOf="@+id/btCacSelected"
+        app:layout_constraintTop_toBottomOf="@+id/ivPlayer" />
 
 
 </android.support.constraint.ConstraintLayout>
